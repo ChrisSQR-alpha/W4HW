@@ -1,0 +1,676 @@
+/*一些全域設定*/
+*, *::before, *::after{
+	Box-sizing: border-box;
+}
+img{
+	max-width:100%;
+	height:auto;
+}
+body{
+    font-family: roboto, Microsoft JhengHei, san-serif;
+    font-size: 16px;
+    line-height: 24px;
+    overflow-x: hidden;
+}
+
+/*外框*/
+.wrap{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*Header*/
+.header{
+    max-width: 100%;
+    background-color: #AA0601;
+    color: #fff;
+    height: 108px;
+    /*內容器限制寬度及置中*/
+    .headerContainer{
+        max-width: 1760px;
+        margin: 0 auto;
+        display:flex;
+        /*flex 排列img和nav*/
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 30px;
+
+    }
+    img{
+        display: block;
+        width: 80px;
+        height: 49px;
+    }
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+    nav{
+        ul{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 512px;
+            li{
+                width: 80px;
+                text-align: right;
+            }
+        }
+    }
+}
+
+/*Banner 處理橫幅背景圖片和h1文字大小和位置*/
+.banner{
+    max-width: 100%;
+    margin: 0 auto;
+    background-image: url("../resources/banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*只有設定背景圖片並不會顯示*/
+    /*所以靠下面的div class來撐開*/
+    .bannerInner{
+        max-width: 1920px;
+        margin: 0 auto;
+        padding-bottom: 330px;
+    }
+}
+
+/*Banner 區域的container*/
+/*設定h1文字的大小和位置*/
+.alignBox{
+    color: #650300;
+    max-width: 64%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    text-align: right;
+    font-weight: 900;
+    padding-left: 360px;
+    h1{
+        font-size: 64px;
+        line-height: 96px;
+        display: inline-block;
+    }
+    .smFont{
+        font-size: 36px;
+        line-height: 54px;
+        margin-top: 340px;
+    }
+    
+}
+
+/*icon和文字的排列*/
+/*ul內display:flex的排列*/
+.introduction{
+    background-color:#AA06010D;
+    max-width:100%;
+    height: 594px;
+    h2{
+        color:#650300;
+        font-size: 48px;
+        line-height: 72px;
+        font-weight: 900;
+        text-align: center;
+        padding-top: 64px;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 44px;
+        padding-top: 16px;
+
+    }
+    li{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 208px;
+        margin: 0 12 0 12;
+
+    }
+    img{
+        margin-top: 16px;
+        margin-bottom: 40px;
+    }
+    .heart{
+        margin-bottom: 42px;
+    }
+    .glasses{
+        margin-top: 32px;
+        margin-bottom: 54px;
+    }
+    h3{
+        color: #650300;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/*經典鏡框*/
+.classicSeries{
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    img{
+        display: block;
+    }
+    h2{
+        color:#650300;
+        font-size: 48px;
+        line-height: 72px;
+        font-weight: 900;
+        text-align: center;
+        padding-top: 64px;
+        margin-bottom: 60px;
+    }
+    h4{
+        display: inline-block;
+        font-size: 48px;
+        line-height: 72px;
+        font-weight: 900;
+        color: #AA0601;
+        font-style: italic;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 90px;
+        li{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        .mainPicture{
+            width: 792px;
+                height: 320px;
+        }
+        .obverse{
+            justify-content: flex-start;
+            .mainPicture{
+                margin-right: 24px;
+            }
+            .icon{
+                margin-right: 8px;
+            }
+        }
+        .reverse{
+            justify-content: flex-end;
+            .mainPicture{
+                margin-left: 24px;
+                position: relative;
+                z-index: 1;
+            }
+            h4{
+                margin-left: 8px;
+            }
+        }
+
+    }
+    /*利用opacity做到照片變色的效果*/
+    .colorImg{
+        width: 792px;
+        height: 320px;
+        margin-left: 24px;
+        position: relative;
+        z-index: 0;
+        top:-319px;
+    }
+    .reverse{
+        .mainPicture:hover{
+            opacity: 0;
+        }
+    }
+    /*不設定height會2倍長*/
+    .colorTransformer{
+        height: 320px;
+    }
+}
+
+/*聯名鏡框*/
+.co-branding{
+    max-width: 100%;
+    height: 2162px;
+    margin: 0 auto;
+    /*設定背景圖片*/
+    background-image: url("../resources/bg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    h2{
+        position: relative;
+        z-index: 3;
+        top:64px;
+        font-size: 48px;
+        line-height: 72px;
+        font-weight: 900;
+        text-align: center;
+        color: #fff;
+    }
+    img{
+        display: block;
+    }
+}
+/*聯名鏡框container中有container*/
+.alignBox2{
+    position: relative;
+    z-index: 2;
+    top:191px;
+    max-width: 1576px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    img{
+        display: block;
+        margin: 4px;
+    }
+    
+    .leftBox {
+        img{
+            max-width: 573px;
+            height: 840px;
+        }  
+    }
+    .rightBox{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .rightUpperBox img{
+            max-width: 958px;
+        }
+        .rightLowerBox{
+            max-width: 958px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            .rightLowerRightBox{
+                flex-direction: column;
+                .interior {
+                    padding-left: 476px;
+                    img{
+                        margin-top: 4px;
+                    }
+                    /*more 區塊基礎設定*/
+                    .more{
+                        position: absolute;
+                        z-index: 3;
+                        margin-top: 28px;
+                        margin-left: 28px;
+                        font-size: 72px;
+                        line-height: 108px;
+                        width:315px;
+                        color: #AA0601;
+                        background-color: #ffffff;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                    }
+                    /*讓span和img 排列好*/
+                    .more span{
+                        display: inline-block;
+                        margin-left: 16px;
+                    }
+                    .more img{
+                        display: inline-block;
+                    }
+                    /*用偽元素before建立第2個more*/
+                    .more span::before{
+                        content: 'MORE';
+                        position: absolute;
+                        transition: all .65s .3s;
+                        transform: translateY(0px);
+                    }
+                    .more span:hover::before{
+                        transform: translateY(-85px);
+                        opacity: .7;
+                    }
+
+                    /*用偽元素after建立第3個more*/
+                    .more span::after{
+                        content: 'MORE';
+                        position: absolute;
+                        /*移動第三層MORE的水平位置*/
+                        left:5%;
+                        transition: all .65s .3s;
+                        transform: translateY(0px);
+                    }
+                    .more span:hover::after{
+                        transform: translateY(-145px);
+                        opacity: .4;
+                    }
+
+                    /*arrow圖片的橫向移動*/
+                    .more:hover img:last-child{
+                        transition: all .65s .3s;
+                        transform: translateX(15px);
+
+                    }
+                }
+            }
+        }
+    }
+}
+/*複雜container下方較簡單的區塊*/
+.alignBox3{
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    top: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/*簡單區塊裡面的container*/
+.lowerBox{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    div{
+        margin:15px;
+        /*圖片底色處理*/
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    h3{
+        position: absolute;
+        z-index: 5;
+        top:249px;
+        font-size: 72px;
+        line-height: 108px;
+        color:#AA0601;
+    }
+    /*圖片透明度的處理*/
+    img{
+        width:585px;
+        opacity: 50%;
+    }
+}
+
+/*顧客建議區塊*/
+/*RWD需要再改進*/
+.guestRecommendation{
+    position:relative;
+    z-index: 6;
+    top:-360px;
+    max-width:1200px;
+    margin: 0 auto;
+    text-align: center;
+    color:#ffffff;
+    display:flex;
+    flex-direction: column;    
+    h2{
+        font-size: 48px;
+        line-height: 72px;
+        margin-bottom: 60px;
+        font-weight: 900;
+    }
+    img{
+        display: block;
+        width: 282px;
+        height: 256px;
+    }
+    .alignBox4{
+        max-width: 1212px;
+    }
+    .alignBox4Inner{
+        display:flex;
+        justify-content: center;
+    }
+    .message{
+        margin: 0 12px 0 12px;
+    }
+    .messageDetails{
+        border: 1px solid #DEE2E6;
+        width: 276px;
+        height: 245px;
+        position: absolute;
+        z-index: -1;
+        top:332px;
+        margin-bottom: 16px;
+        font-size: 16px;
+        text-align: left;
+        padding-left: 16px;
+        line-height: 21px;
+        font-family: roboto;
+    }
+    h3{
+        color:#000000;
+        margin-top: 72px;
+        margin-bottom: 16px;
+    }
+    p{
+        color:#000000;
+        width:252px;
+        margin-bottom: 16px;
+        line-height: 24px;
+    }
+        
+    .timeTag{
+        color:#707070;
+    }
+
+}
+
+/*聯絡我們區塊*/
+.contactUs{
+    background-color:#AA06010D;
+    .alignBox5{
+        max-width:792px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 24px;
+        padding-top: 64px;
+        padding-bottom: 108px;
+    }
+    h2{
+        font-size: 48px;
+        line-height: 72px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    p{
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+/*text textarea 顯示及標示設定*/
+input[type="text"], textarea{
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    border: 1px solid #000000;
+    background-color: transparent;
+}
+textarea{
+    resize: none;
+    height: 136px;
+}
+
+/*使用者輸入區塊設定*/
+::placeholder, input[type="submit"], label{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/*核取區塊設定*/
+input[type="checkbox"] + label{
+    padding-left: 4px;
+    display:block;
+    cursor:pointer;
+}
+/*預設的盒子不要顯示*/
+input[type="checkbox"]{
+    display: none;
+}
+/*還沒打勾*/
+input[type="checkbox"] + label::before{
+    /*打勾符號代碼*/
+    content:"\2714";
+    display: inline-block;
+    color: transparent;
+    border:1px solid #000;
+    /*外框尖角變圓潤*/
+    border-radius: 10%;
+    width:16px;
+    height:16px;
+    margin-right: 8px;
+    padding-left: 3px;
+    vertical-align: middle;
+}
+/*打勾之後*/
+input[type="checkbox"]:checked + label::before{
+    background-color: #AA0601;
+    border-color: #AA0601;
+    color: #fff;
+    
+}
+
+/*送出按鈕文字位置*/
+.submit{
+    margin-top: 42px;
+    text-align: center;
+}
+/*送出按鈕樣式*/
+input[type="submit"]{
+    padding:16px 58px;
+    border: none;
+    background-color: #AA0601;
+    color:#fff;
+    cursor: pointer
+}
+
+/*滑鼠碰到送出按鈕*/
+input[type="submit"]:hover{
+    background-color: #650300;
+}
+
+/*footer設定*/
+.footer{
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 28px;
+    background-color: #AA0601;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
+    p{
+        font-size: 36px;
+        line-height: 54px;
+        display:inline-block;
+        vertical-align: 20%;
+    }
+    .container{
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+    .link{
+        padding-bottom: 32px;
+    }
+    ul li{
+        display: inline-block;
+    }
+    nav{
+        ul{
+            padding-top: 48px;
+            width:464px;
+            display:flex;
+            justify-content: space-between;
+        }
+    }
+    .icon{
+        padding-top: 36px;
+        width:208px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact{
+        padding-bottom: 2px;
+        border-bottom: 1px solid #fff;
+        div{
+            margin-bottom: 22px;
+        }
+    }
+    .phone{
+        width: 36px;
+        height: 36px;
+        margin-right: 23px;
+    }
+    .test{
+        line-height: 48px;
+    }
+    .mail{
+        width: 48px;
+        height: 48px;
+        margin-right: 12px;
+    }
+
+    .policy{
+        margin-top: 24px;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        ul{
+            padding-top: 16px;
+            width:100%;
+            display:flex;
+            justify-content: space-between;
+        }
+        .interiorPolicy{
+            padding-top: 0px;
+            width: 188px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .logo{
+        width: 80px;
+        height: 48.57px;
+        margin-right: 38px;
+    }
+
+    .link{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+ /*自適應設定*/ 
+ @media (max-width:768px) {
+    .container {
+      max-width: 498px;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .container {
+      max-width: 327px;
+    }
+  }
+

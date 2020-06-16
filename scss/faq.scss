@@ -1,0 +1,81 @@
+.faq{
+    max-width: 100%;
+    height: auto;
+    background-image:url("../resources/qa.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    .faqContainer{
+        max-width: 1200px;
+        margin: 0 auto;
+        h1{
+            padding-top: 214px;
+            font-size: 64px;
+            line-height: 80px;
+            font-weight: 900;
+            display: inline-block;
+        }
+        .questionMark{
+            height:54px;
+            width:54px;
+        }
+    }
+}
+.card{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 156px;
+    .cardContainer{
+        max-width:1200px;
+        margin: 0 auto;
+        h2{
+            font-size: 32px;
+            line-height: 63px;
+            font-weight: 900;
+            padding-top: 88px;
+        }
+    }
+}
+
+.question{
+    border: 1px solid #000;
+    padding: 22px 38px;
+    a{
+       text-decoration: none;
+       color: black;
+       display: flex; 
+       justify-content: space-between;
+    }
+    h3{
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 600;
+        display: inline-block;
+    }
+    img{
+        width: 38.94px;
+        height: 24px;
+        display: block;
+    }
+}
+.answer{
+    padding: 22px 38px;
+    background-color: #f2f2f2;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+//控制箭頭的顯示
+.cardItem:not(.active) .up{
+    display: none;
+}
+.cardItem.active .down{
+    display: none;
+}
